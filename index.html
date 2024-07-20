@@ -5,31 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Школа Advance</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <!-- Topbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-			<img src="img/logo.jpg" alt="" height="50px">
-		</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">Про нас</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#courses">Курси</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Контакти</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpg" alt="" height="80px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-1" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-text-custom" href="#about">Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text-custom" href="#courses">Курси</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text-custom" href="#contact">Контакти</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Advance.edu.center" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/advance_edu_center?igsh=NTRzYXdsOHJmdDl4" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </div>
     </nav>
-
     <!-- Sections -->
     <section id="about" class="py-5">
         <div class="container">
@@ -37,7 +48,7 @@
             <p>Ласкаво просимо до школи Advance! Ми пропонуємо сучасні та якісні освітні послуги для всіх вікових категорій.</p>
         </div>
     </section>
-
+    
     <section id="courses" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center">Наші курси</h2>
@@ -46,12 +57,47 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark text-white">
-        <div class="container text-center">
-            <p>&copy; 2024 Advance. Всі права захищені.</p>
-            <p>Контактний телефон: (123) 456-7890</p>
-            <p>Email: info@advance.ua</p>
+    <footer class="footer-custom" id="contact">
+        <p class="footer-heading">Контакти</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 contact-column">
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i>Зателефонуйте нам:</p>
+                        <a href="tel:+380988997747" class="footer-link">+38 (098) 899-77-47</a><br>
+                        <a href="tel:+380988997757" class="footer-link">+38 (098) 899-77-57</a>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i>Напишіть нам:</p>
+                        <a href="mailto:advance.edu.center@gmail.com" class="footer-link">advance.edu.center@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 contact-column">
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i>Завітайте до нас:</p>
+                        <p><a href="https://maps.app.goo.gl/rw8grgKpsQF3oriB6" target="_blank" class="footer-link">вул. Героїв УПА, 1<br>м. Кам'янець-Подільський</a></p>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fas fa-clock"></i>Графік роботи:</p>
+                        <p>Пн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 15:00<p>
+                    </div>
+                </div>
+                <div class="col-md-6 contact-column">
+                    <div class="contact-info">
+                        <h>Слідкуйте за нами в соціальних мережах:</h>
+                    </div>
+                    <div class="footer-icons">
+                        <a href="https://www.facebook.com/Advance.edu.center" target="_blank" class="footer-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/advance_edu_center?igsh=NTRzYXdsOHJmdDl4" target="_blank" class="footer-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+        <hr class="footer-divider">
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
