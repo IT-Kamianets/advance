@@ -1,0 +1,136 @@
+html {
+    scroll-behavior: smooth;
+}
+/*HEADER*/
+.navbar-custom {
+    background-color: #691212; /*HEADER COLOR*/
+}
+.container-fluid {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.navbar-brand {
+    flex-shrink: 0;
+}
+.navbar-toggler {
+    flex-shrink: 0;
+}
+.navbar-collapse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+.nav-item {
+    margin: 0 10px;
+}
+.nav-text-custom { /*HEADER FONT*/
+    color: white;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+.nav-text-custom:hover { /*HEADER FONT COLOR CHANGE*/
+    color: #d3a66d;
+}
+.social-icons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+}
+.social-icon { /*HEADER ICON*/
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.social-icon:hover {
+    color: #d3a66d; /*HEADER ICON COLOR CHANGE*/
+}
+
+/*ABOUT US*/
+
+/*COURSES*/
+
+/* FOOTER */
+.footer-custom {
+    background-color: #691212;
+    color: white;
+    padding: 20px 10%;
+}
+
+.footer-custom .container-fluid {
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+.footer-custom .row {
+    display: flex;
+}
+.contact-column {
+    flex: 1; 
+    width: 500px; 
+    text-align: left; 
+}
+
+.footer-custom .footer-heading {
+    font-size: 2rem; 
+    margin-bottom: 15px; 
+}
+
+.contact-info {
+    margin-bottom: 15px; 
+}
+
+.footer-custom p {
+    margin: 10px 0; 
+    font-size: 1rem; 
+}
+
+.footer-custom i {
+    margin-right: 8px; 
+    color: #f0f0f0;
+}
+
+.footer-custom h {
+    margin: 10px 0; 
+    font-size: 1.25rem; 
+}
+.footer-link {
+    color: white; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+.footer-link:hover {
+    color: #d3a66d;
+}
+.footer-icons {
+    display: flex;
+    gap: 10px;
+    margin: 0.1rem;
+    font-size: 1.75rem;
+}
+.footer-icon {
+    color: white; 
+    transition: color 0.3s ease; 
+    text-decoration: none; 
+}
+.footer-icon:hover {
+    color: #d3a66d; 
+}
+.footer-divider {
+    border: 0; 
+    height: 1px;
+    background-color: #7e1c1c; 
+    margin: 10px 0; 
+}
