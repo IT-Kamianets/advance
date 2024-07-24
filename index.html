@@ -213,7 +213,56 @@
         <hr class="footer-divider">
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  document.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar-custom');
+    if (window.scrollY > 100) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    var navbar = document.querySelector('.navbar-custom');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var isMenuOpen = navbarToggler.classList.contains('active');
+
+    if (isMenuOpen) {
+      navbar.classList.remove('show-menu');
+      navbarToggler.classList.remove('active');
+      navbarToggler.querySelector('span').textContent = 'Меню';
+    } else {
+      navbar.classList.add('show-menu');
+      navbarToggler.classList.add('active');
+      navbarToggler.querySelector('span').textContent = 'Закрити';
+    }
+  });
+
+  function closeMenu() {
+    var navbar = document.querySelector('.navbar-custom');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarCollapse.classList.contains('show')) {
+      navbar.classList.remove('show-menu');
+      navbarToggler.classList.remove('active');
+      navbarCollapse.classList.remove('show');
+      navbarToggler.querySelector('span').textContent = 'Меню';
+    }
+  }
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 992) {
+      closeMenu();
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth >= 992) {
+      closeMenu();
+    }
+  });
+</script>
 </body>
 </html>
