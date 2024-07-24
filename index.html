@@ -9,38 +9,50 @@
     <link href="CSS/styles.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Topbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.jpg" alt="" height="80px">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse flex-grow-1" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link nav-text-custom" href="#about">Про нас</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-text-custom" href="#courses">Курси</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-text-custom" href="#contact">Контакти</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/Advance.edu.center" target="_blank" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/advance_edu_center?igsh=NTRzYXdsOHJmdDl4" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </nav>
+<!-- Topbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/logo_advance.svg" alt="Логотип" class="navbar-logo">
+    </a>
+    <a class="navbar-brand-white" href="#">
+      <img src="img/logo_advance_white.svg" alt="Логотип" class="navbar-logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span>Меню</span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-1" id="navbarNav">
+      <div class="nav-left border-bottom-custom">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link nav-text-custom" href="#about">Про нас</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-text-custom" href="#courses">Курси</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link nav-text-custom" href="#contact">Контактна інформація</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="video-text-wrapper">
+  <div class="video-container">
+    <video autoplay loop muted>
+      <source src="video/video.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="text-block">
+    <h1>ОСВІТНІЙ ЦЕНТР «ADVANCE»</h1>
+    <h2>Наша освіта - ваш успіх!</h2>
+  </div>
+</div>
     <!-- Sections -->
     <section id="about" class="py-5">
         <div class="container">
