@@ -263,23 +263,6 @@
       closeMenu();
     }
   });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var navItems = document.querySelectorAll('.navbar-toggler');
-    var toggler = document.querySelector('.navbar-toggler');
-    navItems.forEach(function (item) {
-      item.addEventListener('touchstart', function () {
-        item.style.color = '#d3a66d';
-      });
-      item.addEventListener('touchend', function () {
-        toggler.addEventListener('click', function () {
-          setTimeout(function () {
-            item.style.color = '#ffffff';
-          }, 300);
-        });
-      });
-    });
-  });
 </script>
 </body>
 </html>
