@@ -107,9 +107,6 @@ html {
 .nav-text-custom:hover, .navbar-toggler:hover {
     color: #d3a66d;
 }
-.nav-text-custom:active, .navbar-toggler:active {
-    color: #770f00;
-}
 .navbar-custom.scrolled {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
@@ -282,12 +279,81 @@ html {
     .navbar-custom.show-menu .navbar-toggler:hover{
         color: #d3a66d;
     }
-    .navbar-custom.show-menu .navbar-toggler:active {
-        color: white;
-    }
 }
 
 /*ABOUT US*/
+.about-section {
+    padding-top: 115px;
+    background-color: #770f00;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-family: "BerlingskeSerif-SemiBold";
+}
+.about-section h2 {
+    margin-bottom: 2.0rem;
+    font-size: 1.5rem;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+}
+.about-section p{
+    line-height: 1.7;
+    margin: 0 auto;
+    display: block;
+    font-size: 2.3em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    font-weight: bold;
+}
+.arrow-long {
+    display: block;
+    margin: 1rem auto;
+    max-width: 1rem;
+}
+.arrow-long svg {
+    width: 100%;
+    height: auto;
+}
+@media (max-aspect-ratio: 9/16) {
+    .about-section {
+        padding-bottom: 56.25%;
+        padding-top: 115px;
+    }
+    .about-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.75rem;
+    }
+    .about-section p {
+        font-size: 2.3rem;
+    }
+}
+@media (max-width: 991px) {
+    .about-section {
+        padding-top: 115px;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-section p {
+        font-size: 1.9rem;
+    }
+}
+@media (max-width: 767px) {
+    .about-section{
+        padding-top: 105px;
+    }
+    .about-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    .about-section p {
+        font-size: 1.4rem;
+    }
+}
 
 /*COURSES*/
 .course-list {
