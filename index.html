@@ -265,31 +265,18 @@
   });
 
   document.addEventListener('DOMContentLoaded', function() {
-    var navItems = document.querySelectorAll('.nav-text-custom, .navbar-toggler');
-    var navbar = document.querySelector('.navbar-custom');
+    var navItems = document.querySelectorAll('.navbar-toggler');
     var toggler = document.querySelector('.navbar-toggler');
-    var togglerItems = document.querySelectorAll('.navbar-custom.show-menu .navbar-toggler');
-    var togglershow = document.querySelector('.navbar-custom.show-menu .navbar-toggler');
-    navItems.forEach(function(item) {
-      item.addEventListener('touchstart', function() {
+    navItems.forEach(function (item) {
+      item.addEventListener('touchstart', function () {
         item.style.color = '#d3a66d';
       });
-
-      item.addEventListener('touchend', function() {
-        setTimeout(function() {
-          item.style.color = '#770f00';
-        }, 300);  // Відповідає transition в CSS
-      });
-    });
-    togglerItems.forEach(function(item) {
-      item.addEventListener('touchstart', function() {
-        item.style.color = '#d3a66d';
-      });
-
-      item.addEventListener('touchend', function() {
-        setTimeout(function() {
-          item.style.color = '#ffffff';
-        }, 300);
+      item.addEventListener('touchend', function () {
+        toggler.addEventListener('click', function () {
+          setTimeout(function () {
+            item.style.color = '#ffffff';
+          }, 300);
+        });
       });
     });
   });
