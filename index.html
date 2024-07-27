@@ -251,14 +251,14 @@
       });
       link.addEventListener('mouseout', function () {
         this.classList.remove('hover');
-        this.classList.remove('active');
+        this.classList.remove('active1');
       });
       link.addEventListener('touchstart', function () {
-        this.classList.add('active');
+        this.classList.add('active1');
       });
       link.addEventListener('touchend', function () {
         setTimeout(() => {
-          this.classList.remove('active');
+          this.classList.remove('active1');
         }, 200);
       });
     });
