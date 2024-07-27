@@ -188,9 +188,6 @@ html {
     }
 }
 @media (max-aspect-ratio: 1/1) {
-    .video-text-wrapper{
-        height: 100vh;
-    }
     .video-container video, .text-block {
         width: 100%;
         height: auto;
