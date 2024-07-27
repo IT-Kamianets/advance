@@ -104,11 +104,8 @@ html {
     font-size: 1.25rem;
     transition: color 0.3s ease;
 }
-.nav-text-custom.hover, .navbar-toggler.hover {
-    color: #d3a66d;
-}
-.nav-text-custom.active1, .navbar-toggler.active1 {
-    color: #770f00;
+.nav-text-custom:hover, .navbar-toggler:hover {
+    color: #b72812;
 }
 .navbar-custom.scrolled {
     background-color: rgba(255, 255, 255, 0.5);
@@ -234,6 +231,9 @@ html {
         opacity: 0;
         overflow: hidden;
     }
+    .navbar-toggler:hover {
+        color: #770f00;
+    }
     .navbar-collapse.show {
         max-height: 500px;
         opacity: 1;
@@ -283,7 +283,10 @@ html {
         color: white;
     }
     .navbar-custom.show-menu .navbar-toggler:hover{
-        color: #d3a66d;
+        color: white;
+    }
+    .navbar-custom.show-menu .nav-text-custom:hover{
+        color: white;
     }
 }
 
