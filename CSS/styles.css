@@ -104,8 +104,11 @@ html {
     font-size: 1.25rem;
     transition: color 0.3s ease;
 }
-.nav-text-custom:hover, .navbar-toggler:hover {
+.nav-text-custom.hover, .navbar-toggler.hover {
     color: #d3a66d;
+}
+.nav-text-custom.active {
+    color: #770f00;
 }
 .navbar-custom.scrolled {
     background-color: rgba(255, 255, 255, 0.5);
@@ -284,6 +287,8 @@ html {
 /*ABOUT US*/
 .about-section {
     padding-top: 115px;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: #770f00;
     text-align: center;
     width: 100%;
@@ -315,44 +320,114 @@ html {
     width: 100%;
     height: auto;
 }
-@media (max-aspect-ratio: 9/16) {
-    .about-section {
-        padding-bottom: 56.25%;
-        padding-top: 115px;
-    }
-    .about-section h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.75rem;
-    }
-    .about-section p {
-        font-size: 2.3rem;
-    }
+.about-section.diagonal-511-600 {
+    padding-top: 70px;
 }
-@media (max-width: 991px) {
-    .about-section {
-        padding-top: 115px;
-    }
-
-    .about-section h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .about-section p {
-        font-size: 1.9rem;
-    }
+.about-section.diagonal-511-600 h2 {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
 }
-@media (max-width: 767px) {
-    .about-section{
-        padding-top: 105px;
-    }
-    .about-section h2 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-    }
-    .about-section p {
-        font-size: 1.4rem;
-    }
+.about-section.diagonal-511-600 p {
+    font-size: 0.9rem;
+}
+.about-section.diagonal-601-726 {
+    padding-top: 80px;
+}
+.about-section.diagonal-601-726 h2 {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.about-section.diagonal-601-726 p {
+    font-size: 1rem;
+}
+.about-section.diagonal-727-764 {
+    padding-top: 80px;
+}
+.about-section.diagonal-727-764 h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.about-section.diagonal-727-764 p {
+    font-size: 1.2rem;
+}
+.about-section.diagonal-765-862 h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.about-section.diagonal-765-862 p {
+    font-size: 1.3rem;
+}
+.about-section.diagonal-863-968 {
+    padding-top: 105px;
+}
+.about-section.diagonal-863-968 h2{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.about-section.diagonal-863-968 p {
+    font-size: 1.5rem;
+}
+.about-section.diagonal-969-1016 {
+    padding-top: 105px;
+}
+.about-section.diagonal-969-1016 h2{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.about-section.diagonal-969-1016 p {
+    font-size: 1.65rem;
+}
+.about-section.diagonal-1017-1107 {
+    padding-top: 105px;
+}
+.about-section.diagonal-1017-1107 h2{
+    margin-bottom: 1rem;
+}
+.about-section.diagonal-1017-1107 p {
+    font-size: 1.75rem;
+}
+.about-section.diagonal-1108-1234 {
+    padding-top: 100px;
+}
+.about-section.diagonal-1108-1234 h2{
+    margin-bottom: 1rem;
+}
+.about-section.diagonal-1108-1234 p {
+    font-size: 1.9rem;
+}
+.about-section.diagonal-1235-1359 {
+    padding-top: 105px;
+    height: 775px;
+}
+.about-section.diagonal-1235-1359 h2{
+    margin-bottom: 1rem;
+}
+.about-section.diagonal-1235-1359 p {
+    font-size: 1.9rem;
+}
+.about-section.diagonal-1360-1474 {
+    padding-top: 105px;
+    height: 675px;
+}
+.about-section.diagonal-1360-1474 p {
+    font-size: 1.9rem;
+}
+.about-section.diagonal-1526-1592 {
+    padding-top: 105px;
+    height: 65vh;
+}
+.about-section.diagonal-1526-1592 p {
+    font-size: 2.2rem;
+}
+.about-section.diagonal-1593-1677 {
+    padding-top: 105px;
+    height: 65vh;
+}
+.about-section.diagonal-1593-1677 p {
+    font-size: 2rem;
+}
+.about-section.diagonal-1678-1708 {
+    height: 65vh;
 }
 
 /*COURSES*/
