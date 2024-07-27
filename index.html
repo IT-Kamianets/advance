@@ -251,13 +251,12 @@
         this.classList.remove('hover');
         this.classList.remove('active1');
       });
-      link.addEventListener('touchstart', function () {
+      link.addEventListener('mouseup', function () {
         this.classList.add('active1');
       });
-      link.addEventListener('touchend', function () {
-        setTimeout(() => {
-          this.classList.remove('active1');
-        }, 200);
+      link.addEventListener('mousemove', function () {
+        this.classList.add('hower');
+        this.classList.remove('active1');
       });
     });
   });
