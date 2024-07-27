@@ -289,14 +289,16 @@ html {
 
 /*ABOUT US*/
 .about-section {
-    padding-top: 115px;
-    padding-bottom: 115px;
     background-color: #770f00;
     text-align: center;
     width: 100%;
     height: auto;
     color: white;
     font-family: "BerlingskeSerif-SemiBold";
+}
+.ab, .cd{
+    padding-top: 115px;
+    padding-bottom: 115px;
 }
 .about-section h2 {
     margin-bottom: 2.0rem;
@@ -323,15 +325,13 @@ html {
     height: auto;
 }
 @media (min-width: 500.01px) and (max-width: 1024px){
-    .about-section {
-        padding-bottom: 50px;
-        padding-top: 0;
-    }
     .ab {
         padding-top: 100px;
+        padding-bottom: 50px;
     }
     .cd {
         padding-top: 40px;
+        padding-bottom: 50px;
     }
     .about-section h2{
         font-size: 1.3rem;
@@ -341,15 +341,13 @@ html {
     }
 }
 @media (max-width: 500px){
-    .about-section {
-        padding-bottom: 40px;
-        padding-top: 0;
-    }
     .ab {
         padding-top: 80px;
+        padding-bottom: 40px;
     }
     .cd {
         padding-top: 40px;
+        padding-bottom: 40px;
     }
     .about-section h2{
         margin-bottom: 1rem;
