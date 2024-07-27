@@ -231,7 +231,6 @@
         </div>
         <hr class="footer-divider">
     </footer>
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -244,12 +243,30 @@
       navbar.classList.remove('scrolled');
     }
   });
-
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-text-custom');
+    navLinks.forEach(link => {
+      link.addEventListener('mouseover', function () {
+        this.classList.add('hover');
+      });
+      link.addEventListener('mouseout', function () {
+        this.classList.remove('hover');
+        this.classList.remove('active');
+      });
+      link.addEventListener('touchstart', function () {
+        this.classList.add('active');
+      });
+      link.addEventListener('touchend', function () {
+        setTimeout(() => {
+          this.classList.remove('active');
+        }, 200);
+      });
+    });
+  });
   document.querySelector('.navbar-toggler').addEventListener('click', function() {
     var navbar = document.querySelector('.navbar-custom');
     var navbarToggler = document.querySelector('.navbar-toggler');
     var isMenuOpen = navbarToggler.classList.contains('active');
-
     if (isMenuOpen) {
       navbar.classList.remove('show-menu');
       navbarToggler.classList.remove('active');
@@ -260,7 +277,6 @@
       navbarToggler.querySelector('span').textContent = 'Закрити';
     }
   });
-
   function closeMenu() {
     var navbar = document.querySelector('.navbar-custom');
     var navbarToggler = document.querySelector('.navbar-toggler');
@@ -282,6 +298,47 @@
       closeMenu();
     }
   });
+  function calculateDiagonal(width, height) {
+    return Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+  }
+  function applyResponsiveStyles() {
+    let width, height;
+    if (window.screen.width <= 1024) {
+      width = window.screen.width;
+      height = window.screen.height;
+    } else if(window.innerWidth < 1200  || window.innerHeight >= 860){
+      width = window.innerWidth;
+      height = window.innerHeight;
+    }
+    const diagonal = calculateDiagonal(width, height);
+    const ranges = [
+      { min: 511, max: 600, className: 'diagonal-511-600' },
+      { min: 600.01, max: 726, className: 'diagonal-601-726' },
+      { min: 726.01, max: 764, className: 'diagonal-727-764' },
+      { min: 764.01, max: 862, className: 'diagonal-765-862' },
+      { min: 862.01, max: 968, className: 'diagonal-863-968' },
+      { min: 968.01, max: 1016, className: 'diagonal-969-1016' },
+      { min: 1016.01, max: 1107, className: 'diagonal-1017-1107' },
+      { min: 1107.01, max: 1234, className: 'diagonal-1108-1234' },
+      { min: 1234.01, max: 1359, className: 'diagonal-1235-1359' },
+      { min: 1359.01, max: 1474, className: 'diagonal-1360-1474' },
+      { min: 1474.01, max: 1525, className: 'diagonal-1475-1525' },
+      { min: 1525.01, max: 1592, className: 'diagonal-1526-1592' },
+      { min: 1592.01, max: 1677, className: 'diagonal-1593-1677' },
+      { min: 1677.01, max: 4000, className: 'diagonal-1678-1708' }
+    ];
+    const aboutSections = document.querySelectorAll('.about-section');
+    aboutSections.forEach(aboutSection => {
+      aboutSection.className = 'about-section';
+      ranges.forEach(range => {
+        if (diagonal >= range.min && diagonal <= range.max) {
+          aboutSection.classList.add(range.className);
+        }
+      });
+    });
+  }
+  window.addEventListener('load', applyResponsiveStyles);
+  window.addEventListener('resize', applyResponsiveStyles);
 </script>
 </body>
 </html>
