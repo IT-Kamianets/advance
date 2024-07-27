@@ -266,6 +266,12 @@
       navbarToggler.querySelector('span').textContent = 'Закрити';
     }
   });
+  const menuItems = document.querySelectorAll('.navbar-custom .nav-item');
+  menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+      closeMenu();
+    });
+  });
   function closeMenu() {
     var navbar = document.querySelector('.navbar-custom');
     var navbarToggler = document.querySelector('.navbar-toggler');
