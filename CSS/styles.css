@@ -107,7 +107,7 @@ html {
 .nav-text-custom.hover, .navbar-toggler.hover {
     color: #d3a66d;
 }
-.nav-text-custom.active, .navbar-toggler.active {
+.nav-text-custom.active1, .navbar-toggler.active1 {
     color: #770f00;
 }
 .navbar-custom.scrolled {
