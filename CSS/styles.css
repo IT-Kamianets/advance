@@ -406,7 +406,7 @@ html {
 .footer-custom {
     background-color: #691212;
     color: white;
-    padding: 90px 20vh;
+    padding: 80px 20vh 50px;
 }
 .column-container {
     max-width: 100%;
@@ -469,6 +469,9 @@ html {
     background-color: #7e1c1c;
     margin: 10px 0;
 }
+.footer-custom h2{
+    font-size: 1rem;
+}
 @media (min-width: 955.01px) and (max-width: 1282px){
     .footer-custom {
         padding: 40px 8%;
@@ -487,7 +490,6 @@ html {
     .column1, .column2 {
         flex: 1 1 50%;
     }
-
     .column3 {
         flex: 1 1 100%;
     }
@@ -515,8 +517,8 @@ html {
         line-height: 1.5;
         font-size: 1.1rem;
     }
-    .footer-divider{
-        width: auto;
+    .footer-custom h2{
+        font-size: 0.9rem;
     }
 }
 @media (max-width: 450px){
@@ -531,5 +533,8 @@ html {
     .footer-custom p1 {
         line-height: 1.5;
         font-size: 1.05rem;
+    }
+    .footer-custom h2{
+        font-size: 0.8rem;
     }
 }
