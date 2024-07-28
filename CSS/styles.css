@@ -469,7 +469,7 @@ html {
     background-color: #7e1c1c;
     margin: 10px 0;
 }
-.footer-custom h2{
+.footer-custom h3{
     font-size: 1rem;
 }
 @media (min-width: 955.01px) and (max-width: 1282px){
@@ -517,7 +517,7 @@ html {
         line-height: 1.5;
         font-size: 1.1rem;
     }
-    .footer-custom h2{
+    .footer-custom h3{
         font-size: 0.9rem;
     }
 }
@@ -534,7 +534,7 @@ html {
         line-height: 1.5;
         font-size: 1.05rem;
     }
-    .footer-custom h2{
+    .footer-custom h3{
         font-size: 0.8rem;
     }
 }
