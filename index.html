@@ -187,7 +187,7 @@
     </section>
 
     <!-- Footer -->
-<!--    <footer class="footer-custom" id="contact">
+    <footer class="footer-custom" id="contact">
         <p class="footer-heading">Контакти</p>
         <div class="container-fluid">
             <div class="row">
@@ -228,7 +228,7 @@
             </div>
         </div>
         <hr class="footer-divider">
-    </footer>-->
+    </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -242,13 +242,22 @@
     }
   });
   document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-text-custom, .navbar-toggler');
+    const navLinks = document.querySelectorAll('.footer-link');
     navLinks.forEach(link => {
       link.addEventListener('mouseover', function () {
         this.classList.add('hover');
+        this.classList.remove('active');
       });
       link.addEventListener('mouseout', function () {
         this.classList.remove('hover');
+        this.classList.add('active');
+      });
+      link.addEventListener('mousedown', function () {
+        this.classList.add('hover');
+      });
+      link.addEventListener('mouseup', function () {
+        this.classList.remove('hover');
+        this.classList.add('active');
       });
     });
   });
