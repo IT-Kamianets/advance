@@ -289,7 +289,6 @@ html {
         color: white;
     }
 }
-
 /*ABOUT US*/
 .about-section {
     background-color: #770f00;
@@ -360,7 +359,6 @@ html {
         font-size: 1.3rem;
     }
 }
-
 /*COURSES*/
 .course-list {
     display: flex;
@@ -404,76 +402,134 @@ html {
     height: 100%;
     object-fit: cover;
 }
-
 /* FOOTER */
 .footer-custom {
     background-color: #691212;
     color: white;
-    padding: 20px 10%;
+    padding: 90px 20vh;
 }
-
-.footer-custom .container-fluid {
-    width: 100%; 
-    margin: 0; 
-    padding: 0; 
+.column-container {
+    max-width: 100%;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-.footer-custom .row {
+.row {
     display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
 }
-.contact-column {
-    flex: 1; 
-    width: 500px; 
-    text-align: left; 
+.column {
+    box-sizing: border-box;
 }
-
+.column1, .column2, .column3 {
+    flex: 1 1 33.333%;
+}
 .footer-custom .footer-heading {
-    font-size: 2rem; 
-    margin-bottom: 15px; 
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
-
 .contact-info {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
-
+.footer-custom h{
+    font-size: 2rem;
+    line-height: 2.5;
+    width: auto;
+}
 .footer-custom p {
-    margin: 10px 0; 
-    font-size: 1rem; 
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-family: "Gill Sans", sans-serif;
 }
-
-.footer-custom i {
-    margin-right: 8px; 
-    color: #f0f0f0;
-}
-
-.footer-custom h {
-    margin: 10px 0; 
-    font-size: 1.25rem; 
+.footer-custom p1 {
+    margin-right: 8px;
+    line-height: 1.9;
+    font-size: 1.35rem;
+    font-family: "BerlingskeSerif-SemiBold";
 }
 .footer-link {
-    color: white; 
-    text-decoration: none; 
-    transition: color 0.3s ease; 
+    color: white;
+    transition: color 0.3s ease;
 }
-.footer-link:hover {
+.footer-link.active {
+    color: white;
+    border-bottom: none;
+    text-decoration: none;
+}
+.footer-link.hover {
     color: #d3a66d;
-}
-.footer-icons {
-    display: flex;
-    gap: 10px;
-    margin: 0.1rem;
-    font-size: 1.75rem;
-}
-.footer-icon {
-    color: white; 
-    transition: color 0.3s ease; 
-    text-decoration: none; 
-}
-.footer-icon:hover {
-    color: #d3a66d; 
+    border-bottom: none;
+    text-decoration: none;
 }
 .footer-divider {
-    border: 0; 
+    border: 0;
     height: 1px;
-    background-color: #7e1c1c; 
-    margin: 10px 0; 
+    background-color: #7e1c1c;
+    margin: 10px 0;
+}
+@media (min-width: 955.01px) and (max-width: 1282px){
+    .footer-custom {
+        padding: 40px 8%;
+    }
+    .column {
+        width: 84%;
+    }
+}
+@media (min-width: 630.01px) and (max-width: 955px){
+    .footer-custom {
+        padding: 40px 6%;
+    }
+    .column {
+        width: 88%;
+    }
+    .column1, .column2 {
+        flex: 1 1 50%;
+    }
+
+    .column3 {
+        flex: 1 1 100%;
+    }
+}
+@media (max-width: 630px){
+    .footer-custom {
+        padding: 40px 6%;
+    }
+    .column {
+        width: 88%;
+    }
+    .column1, .column2, .column3 {
+        flex: 1 1 100%;
+    }
+}
+@media (min-width: 450.01px) and (max-width: 1282px){
+    .footer-custom h{
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+    .footer-custom p {
+        font-size: 1rem;
+    }
+    .footer-custom p1 {
+        line-height: 1.5;
+        font-size: 1.1rem;
+    }
+    .footer-divider{
+        width: auto;
+    }
+}
+@media (max-width: 450px){
+    .footer-custom h{
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+    .footer-custom p {
+        margin: 10px 0;
+        font-size: 0.95rem;
+    }
+    .footer-custom p1 {
+        line-height: 1.5;
+        font-size: 1.05rem;
+    }
 }
