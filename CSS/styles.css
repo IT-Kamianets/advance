@@ -161,7 +161,7 @@ html {
 }
 .text-block h2{
     font-size: 3.5rem;
-    font-family: "BerlingskeSerif-SemiBold";
+    font-family: "BerlingskeSerif-SemiBold", "Times New Roman";
     display: block;
     font-weight: bold;
 }
