@@ -313,7 +313,7 @@ html {
     width: 100%;
     height: auto;
     color: white;
-    font-family: "BerlingskeSerif-SemiBold";
+    font-family: "BerlingskeSerif-SemiBold", "Times New Roman";
 }
 .ab, .cd{
     padding-top: 115px;
@@ -382,7 +382,7 @@ html {
     padding: 115px 10% 0;
     width: 100%;
     height: auto;
-    font-family: "BerlingskeSerif-SemiBold";
+    font-family: "BerlingskeSerif-SemiBold", "Times New Roman";
 }
 .text-container {
     text-align: center;
@@ -408,8 +408,6 @@ html {
 }
 .courses-column1, .courses-column2, .courses-column3 {
     flex: 1 1 50%;
-}
-.courses-column1, .courses-column2, .courses-column3 {
     display: flex;
     align-items: center;
 }
@@ -680,7 +678,7 @@ html {
     margin-right: 8px;
     line-height: 1.9;
     font-size: 1.35rem;
-    font-family: "BerlingskeSerif-SemiBold";
+    font-family: "BerlingskeSerif-SemiBold", "Times New Roman";
 }
 .footer-link {
     color: white;
