@@ -143,6 +143,9 @@ html {
     object-fit: cover;
     transform: translate(-50%, -50%);
 }
+.vidv{
+    display: none;
+}
 .text-block {
     position: absolute;
     top: 0;
@@ -191,6 +194,14 @@ html {
         min-height: 100%;
     }
 }
+@media (min-width: 500.01px) and (max-width: 991px){
+    .text-block h2{
+        font-size: 2.5rem;
+    }
+    .text-block h1{
+        font-size: 1.3rem;
+    }
+}
 @media (max-width: 500px) {
     .video-text-wrapper{
         height: 100vh;
@@ -202,6 +213,12 @@ html {
         width: 100%;
         height: auto;
         min-height: 100%;
+    }
+    .vidv{
+        display: flex;
+    }
+    .vidh{
+        display: none;
     }
     .text-block h2{
         font-size: 2rem;
