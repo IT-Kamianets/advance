@@ -474,34 +474,6 @@
       closeMenu();
     }
   });
- function switchText(direction, index) {
-        if (direction === 'right') {
-            document.getElementById('text1_' + index).classList.add('hidden');
-            document.getElementById('text2_' + index).classList.remove('hidden');
-            document.getElementById('arrowRight_' + index).classList.remove('active');
-            document.getElementById('arrowLeft_' + index).classList.add('active');
-        } else {
-            document.getElementById('text1_' + index).classList.remove('hidden');
-            document.getElementById('text2_' + index).classList.add('hidden');
-            document.getElementById('arrowRight_' + index).classList.add('active');
-            document.getElementById('arrowLeft_' + index).classList.remove('active');
-        }
-    }
-    document.addEventListener('scroll', function() {
-        for(let index = 1; index <= 14; index++){
-            const targetElement = document.getElementById('text2_' + index);
-            const elementTopPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-            const viewportHeight = window.innerHeight;
-            const scrollThresholdDown = elementTopPosition + 600;
-            const scrollThresholdUp = elementTopPosition - 600;
-            if (window.scrollY > scrollThresholdDown || window.scrollY < scrollThresholdUp) {
-                document.getElementById('text1_' + index).classList.remove('hidden');
-                document.getElementById('text2_' + index).classList.add('hidden');
-                document.getElementById('arrowRight_' + index).classList.add('active');
-                document.getElementById('arrowLeft_' + index).classList.remove('active');
-            }
-        }
-    });
 </script>
 </body>
 </html>
