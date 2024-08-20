@@ -57,22 +57,9 @@
     </div>
   </div>
 </nav>
-<div class="video-text-wrapper">
-    <div class="video-container">
-        <div class="vidh">
-        <video autoplay loop muted>
-            <source src="video-horizontal.mp4" type="video/mp4">
-        </video>
-        </div>
-        <div class="vidv">
-        <video autoplay loop muted>
-            <source src="video-vertical.mp4" type="video/mp4">
-        </video>
-        </div>
-    </div>
-    <div class="text-block">
-        <h1>ОСВІТНІЙ ЦЕНТР «ADVANCE»</h1>
-        <h2>Наша освіта - ваш успіх!</h2>
+<div class="image-wrapper">
+    <div class="image-container">
+        <div class="image"><img class="image" src="img/baner.jpg" alt="Банер"></div>
     </div>
 </div>
 <!-- Sections -->
@@ -405,14 +392,22 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-  document.addEventListener('scroll', function() {
-    var navbar = document.querySelector('.navbar-custom');
-    if (window.scrollY > 100) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+    document.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.navbar-custom');
+        var threshold;
+        if (window.matchMedia("(max-width: 700px)").matches) {
+            threshold = window.innerHeight * 0.6;
+        } else if (window.matchMedia("(max-aspect-ratio: 1/1)").matches) {
+            threshold = window.innerHeight * 0.35;
+        } else {
+            threshold = window.innerHeight * 0.75;
+        }
+        if (window.scrollY > threshold) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+   });
   document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.footer-link');
     navLinks.forEach(link => {
