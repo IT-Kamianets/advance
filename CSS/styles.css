@@ -422,7 +422,6 @@ html {
     }
     .courses-column {
         height: auto;
-        min-height: 200px;
     }
     .courses-column1, .courses-column2 {
         flex: 1 1 100%;
