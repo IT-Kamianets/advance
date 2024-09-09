@@ -525,7 +525,10 @@ html {
     box-sizing: border-box;
 }
 .column1, .column2, .column3 {
-    flex: 1 1 33.333%;
+    flex: 1 1 27%;
+}
+.column4 {
+    flex: 1 1 19%;
 }
 .footer-custom .footer-heading {
     font-size: 2rem;
@@ -541,13 +544,13 @@ html {
 }
 .footer-custom p {
     margin: 15px 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: "Gill Sans", sans-serif;
 }
 .footer-custom p1 {
     margin-right: 8px;
     line-height: 1.9;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-family: "BerlingskeSerif-SemiBold", "Times New Roman";
 }
 .footer-link {
@@ -581,18 +584,18 @@ html {
         width: 84%;
     }
 }
-@media (min-width: 630.01px) and (max-width: 955px){
+@media (min-width: 630.01px) and (max-width: 1140px){
     .footer-custom {
         padding: 40px 6%;
     }
     .column {
         width: 88%;
     }
-    .column1, .column2 {
+    .column1, .column2, .column3, .column4 {
         flex: 1 1 50%;
     }
-    .column3 {
-        flex: 1 1 100%;
+    .column3{
+        padding-right: 30px;
     }
 }
 @media (max-width: 630px){
@@ -602,7 +605,7 @@ html {
     .column {
         width: 88%;
     }
-    .column1, .column2, .column3 {
+    .column1, .column2, .column3, .column4{
         flex: 1 1 100%;
     }
 }
