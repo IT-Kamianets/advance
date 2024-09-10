@@ -584,7 +584,7 @@ html {
         width: 84%;
     }
 }
-@media (min-width: 630.01px) and (max-width: 1140px){
+@media (min-width: 630.01px) and (max-width: 1330px){
     .footer-custom {
         padding: 40px 6%;
     }
