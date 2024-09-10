@@ -350,6 +350,39 @@
         </div>
     </div>
 </section>
+<section id="registration" class="registration-section">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd_YEV182baDjpWuox1__ADAptuS8hkqLfWcR1Wvnjphp2B7Q/formResponse" target="hidden_iframe" method="post" onsubmit="return validateForm();" novalidate>
+        <h>Заповніть цю форму і ми зв'яжемося з вами</h>
+        <h1>* – поле обов'язкове для заповнення</h1>
+        <div class="input-container ">
+            <label for="name">Ім'я та Прізвище*:</label>
+            <input type="text" name="entry.952263283" id="name" class="input-field" required>
+            <span class="exclamation">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                <path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path><path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"></path><path fill="#fff" d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"></path>
+            </svg>
+            </span>
+            <span class="error-message">Це поле обов'язкове для заповнення</span>
+        </div>
+        <div class="input-container">
+            <label for="phonenumber">Номер телефону*:</label>
+            <input type="tel" name="entry.780573823" id="phonenumber" class="input-field" required>
+            <span class="exclamation">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                <path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path><path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"></path><path fill="#fff" d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"></path>
+            </svg>
+            </span>
+            <span class="error-message">Це поле обов'язкове для заповнення</span>
+        </div>
+        <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="entry.1659766264" id="email" class="input-field">
+        </div>
+        <button type="submit">Надіслати дані</button>
+        <h2>Натискаючи цю кнопку, ви даєте згоду на обробку ваших персональних даних</h2>
+    </form>
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+</section>
 <!-- Footer -->
 <footer class="footer-custom" id="contact">
   <h>Контакти</h>
@@ -475,6 +508,35 @@
       closeMenu();
     }
   });
+  function validateForm() {
+        var form = document.querySelector('form');
+        var isValid = true;
+        document.querySelectorAll('.input-container').forEach(function(container) {
+            container.classList.remove('show-error');
+        });
+        document.querySelectorAll('.input-field').forEach(function(input) {
+            input.classList.remove('error');
+        });
+        var requiredFields = form.querySelectorAll('input[required]');
+        requiredFields.forEach(function(field) {
+            if (!field.value.trim()) {
+                isValid = false;
+                var container = field.closest('.input-container');
+                container.classList.add('show-error');
+                field.classList.add('error');
+            }
+        });
+        return isValid;
+    }
+    document.querySelectorAll('.input-field').forEach(function(input) {
+        input.addEventListener('input', function() {
+            if (this.value.trim()) {
+                this.classList.remove('error');
+                var container = this.closest('.input-container');
+                container.classList.remove('show-error');
+            }
+        });
+    });
 </script>
 </body>
 </html>
