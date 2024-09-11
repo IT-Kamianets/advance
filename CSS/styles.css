@@ -640,7 +640,8 @@ label {
 .input-container.show-error .exclamation {
     display: block;
 }
-button {
+.button1{
+    background-color: #770f00;
     width: 100%;
     padding: 10px;
     color: #fff;
@@ -650,15 +651,45 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-button:focus {
+.button1:hover {
+    background-color: #b72812;
+}
+.button1:focus {
     outline: none;
     box-shadow: none;
 }
-.button1{
-    background-color: #770f00;
+.success-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.49);
+    z-index: 1001;
+    text-align: center;
 }
-.button1:hover {
+.success-message p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.button2 {
+    padding: 10px 20px;
+    background-color: #770f00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.4rem;;
+}
+.button2:hover {
     background-color: #b72812;
+}
+.button2:focus {
+    outline: none;
+    box-shadow: none;
 }
 @media (min-width: 600.01px) and (max-width: 1000px){
     .close {
@@ -691,7 +722,7 @@ button:focus {
     label{
         font-size: 1.1rem;
     }
-    button {
+    .button1 {
         font-size: 1.25rem;
     }
     .error-message{
@@ -704,6 +735,13 @@ button:focus {
         transform: translateY(-46%);
         width: 27px;
         height: 27px;
+    }
+    .success-message p {
+        font-size: 1.35rem;
+        margin-bottom: 13px;
+    }
+    .button2 {
+        font-size: 1.25rem;;
     }
 }
 @media (max-width: 600px){
@@ -737,7 +775,7 @@ button:focus {
     label{
         font-size: 1rem;
     }
-    button {
+    .button1 {
         font-size: 1.1rem;
     }
     .error-message{
@@ -751,8 +789,12 @@ button:focus {
         width: 23px;
         height: 23px;
     }
-    .button1:hover {
-        background-color: #770f00;
+    .success-message p {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    .button2 {
+        font-size: 1.1rem;;
     }
 }
 /* FOOTER */
