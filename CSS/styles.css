@@ -105,8 +105,24 @@ html {
     font-size: 1.25rem;
     transition: color 0.3s ease;
 }
-.nav-text-custom:hover, .navbar-toggler:hover {
+.nav-text-custom:hover, .navbar-toggler:hover, .social-icon1:hover, .social-icon2:hover {
     color: #b72812;
+}
+.social-icons {
+    color: #770f00;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+.social-icon1 {
+    color: inherit;
+    font-size: 1.5rem;
+}
+.social-icon2 {
+    color: inherit;
+    margin-left: 25px;
+    font-size: 1.9rem;
 }
 .navbar-custom.scrolled {
     background-color: rgba(255, 255, 255, 0.5);
@@ -205,7 +221,7 @@ html {
     .nav-item:last-child {
         border-bottom: none;
     }
-    .nav-text-custom {
+    .nav-text-custom, .social-icons {
         color: white;
         font-size: 1.25rem;
     }
@@ -219,13 +235,7 @@ html {
     .navbar-custom.show-menu .navbar-brand {
         display: none;
     }
-    .navbar-custom.show-menu .navbar-toggler{
-        color: white;
-    }
-    .navbar-custom.show-menu .navbar-toggler:hover{
-        color: white;
-    }
-    .navbar-custom.show-menu .nav-text-custom:hover{
+    .navbar-custom.show-menu .navbar-toggler, .navbar-custom.show-menu .navbar-toggler:hover, .navbar-custom.show-menu .nav-text-custom:hover, .navbar-custom.show-menu .social-icon1:hover, .navbar-custom.show-menu .social-icon2:hover {
         color: white;
     }
 }
