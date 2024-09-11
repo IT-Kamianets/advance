@@ -525,7 +525,7 @@ html {
     transform: translateX(-50%);
     width: 55%;
     height: 100%;
-    background-image: url('https://github.com/IT-Kamianets/advance/blob/b0b775e4a6af56df1c74e4f456358ce3764443dd/img/logo_form.jpg');
+    background-image: url('img/logo_form.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
