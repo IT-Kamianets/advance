@@ -62,6 +62,45 @@
         <div class="image"><img class="image" src="img/baner.jpg" alt="Банер"></div>
     </div>
 </div>
+<!-- Modal form -->
+<div id="formModal" class="modal">
+    <span class="close">&times;</span>
+    <form id="form1" action="https://docs.google.com/forms/d/e/1FAIpQLSd_YEV182baDjpWuox1__ADAptuS8hkqLfWcR1Wvnjphp2B7Q/formResponse" target="hidden_iframe" method="post" onsubmit="return validateForm1();" novalidate>
+        <div class="logo-background"></div>
+        <h>Заповніть цю форму і ми зв'яжемося з вами</h>
+        <h1>* – поле обов'язкове для заповнення</h1>
+        <div class="input-container ">
+            <label for="name1">Ім'я та Прізвище*:</label>
+            <input type="text" name="entry.952263283" id="name1" class="input-field" required>
+            <span class="exclamation">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                    <path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
+                    <path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"></path>
+                    <path fill="#fff" d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"></path>
+                </svg>
+            </span>
+            <span class="error-message">Це поле обов'язкове для заповнення</span>
+        </div>
+        <div class="input-container">
+            <label for="phonenumber1">Номер телефону*:</label>
+            <input type="tel" name="entry.780573823" id="phonenumber1" class="input-field" required>
+            <span class="exclamation">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                    <path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
+                    <path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"></path>
+                    <path fill="#fff" d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"></path>
+                </svg>
+            </span>
+            <span class="error-message">Це поле обов'язкове для заповнення</span>
+        </div>
+        <div class="input-container">
+            <label for="email1">Email:</label>
+            <input type="email" name="entry.1659766264" id="email1" class="input-field">
+        </div>
+        <button type="submit" class="button1">Надіслати дані</button>
+        <h2>Натискаючи цю кнопку, ви даєте згоду на обробку ваших персональних даних</h2>
+    </form>
+</div>
 <!-- Sections -->
 <section id="about" class="about-section">
     <div class="container ab">
@@ -351,7 +390,7 @@
     </div>
 </section>
 <section id="registration" class="registration-section">
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd_YEV182baDjpWuox1__ADAptuS8hkqLfWcR1Wvnjphp2B7Q/formResponse" target="hidden_iframe" method="post" onsubmit="return validateForm();" novalidate>
+    <form id="form2" action="https://docs.google.com/forms/d/e/1FAIpQLSd_YEV182baDjpWuox1__ADAptuS8hkqLfWcR1Wvnjphp2B7Q/formResponse" target="hidden_iframe" method="post" onsubmit="return validateForm2();" novalidate>
         <h>Заповніть цю форму і ми зв'яжемося з вами</h>
         <h1>* – поле обов'язкове для заповнення</h1>
         <div class="input-container ">
@@ -378,7 +417,7 @@
             <label for="email">Email:</label>
             <input type="email" name="entry.1659766264" id="email" class="input-field">
         </div>
-        <button type="submit">Надіслати дані</button>
+        <button type="submit" class="button1">Надіслати дані</button>
         <h2>Натискаючи цю кнопку, ви даєте згоду на обробку ваших персональних даних</h2>
     </form>
     <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -508,13 +547,13 @@
       closeMenu();
     }
   });
-  function validateForm() {
-        var form = document.querySelector('form');
+  function validateForm1() {
+        var form = document.getElementById('form1');
         var isValid = true;
-        document.querySelectorAll('.input-container').forEach(function(container) {
+        document.querySelectorAll('#form1 .input-container').forEach(function(container) {
             container.classList.remove('show-error');
         });
-        document.querySelectorAll('.input-field').forEach(function(input) {
+        document.querySelectorAll('#form1 .input-field').forEach(function(input) {
             input.classList.remove('error');
         });
         var requiredFields = form.querySelectorAll('input[required]');
@@ -528,13 +567,46 @@
         });
         return isValid;
     }
-    document.querySelectorAll('.input-field').forEach(function(input) {
+    function validateForm2() {
+        var form = document.getElementById('form2');
+        var isValid = true;
+        document.querySelectorAll('#form2 .input-container').forEach(function(container) {
+            container.classList.remove('show-error');
+        });
+        document.querySelectorAll('#form2 .input-field').forEach(function(input) {
+            input.classList.remove('error');
+        });
+        var requiredFields = form.querySelectorAll('input[required]');
+        requiredFields.forEach(function(field) {
+            if (!field.value.trim()) {
+                isValid = false;
+                var container = field.closest('.input-container');
+                container.classList.add('show-error');
+                field.classList.add('error');
+            }
+        });
+        return isValid;
+    }
+    document.querySelectorAll('#form1 .input-field, #form2 .input-field').forEach(function(input) {
         input.addEventListener('input', function() {
             if (this.value.trim()) {
                 this.classList.remove('error');
                 var container = this.closest('.input-container');
                 container.classList.remove('show-error');
             }
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        const modal = document.getElementById("formModal");
+        const closeButton = document.querySelector(".close");
+        modal.style.display = "flex";
+        document.body.classList.add("no-scroll");
+        closeButton.addEventListener("click", function() {
+            modal.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        });
+        modal.querySelector('form').addEventListener('click', function(event) {
+            event.stopPropagation();
         });
     });
 </script>
