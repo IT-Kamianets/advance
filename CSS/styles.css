@@ -504,6 +504,53 @@ html {
     }
 }
 /* REGISTRATION */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: "BerlingskeSerif-SemiBold", "Times New Roman", serif;
+}
+#formModal form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 100%;
+    background-image: url('img/logo.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: 1;
+    pointer-events: none;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 4rem;
+    opacity: 1;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.close:hover {
+    color: #ecebeb;
+    opacity: 1;
+}
+body.no-scroll {
+    overflow: hidden;
+}
 .registration-section {
     background-color: #f5f2e6;
     padding: 115px 10% 100px;
@@ -511,7 +558,7 @@ html {
     height: auto;
     font-family: "BerlingskeSerif-SemiBold", "Times New Roman", serif;
 }
-.registration-section h{
+form h{
     color: #770f00;
     font-size: 2rem;
     display: grid;
@@ -520,12 +567,12 @@ html {
     margin: 10px 0 20px;
     font-family: "Gill Sans", sans-serif;
 }
-.registration-section h1{
+form h1{
     font-size: 1rem;
     margin-bottom: 10px;
     margin-left: 5px;
 }
-.registration-section h2{
+form h2{
     font-size: 1.1rem;
     margin-top: 10px;
     text-align: center;
@@ -538,6 +585,7 @@ form {
     width: 80%;
     max-width: 950px;
     margin: 0 auto;
+    position: relative;
 }
 .input-container {
     margin-bottom: 15px;
@@ -595,32 +643,44 @@ label {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #770f00;
     color: #fff;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 5px;
     font-size: 1.35rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-button:hover {
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.button1{
+    background-color: #770f00;
+}
+.button1:hover {
     background-color: #b72812;
 }
 @media (min-width: 600.01px) and (max-width: 1000px){
+    .close {
+        font-size: 3rem;
+    }
+    #formModal form::before {
+        width: 50%;
+    }
     .registration-section {
         padding: 100px 5% 80px;
     }
     form{
         width: 90%;
     }
-    .registration-section h{
+    form h{
         font-size: 1.7rem;
         margin: 10px 0 10px;
     }
-    .registration-section h1{
+    form h1{
         font-size: 1rem;
     }
-    .registration-section h2{
+    form h2{
         font-size: 1rem;
         margin-top: 6px;
     }
@@ -647,20 +707,26 @@ button:hover {
     }
 }
 @media (max-width: 600px){
+    .close {
+        font-size: 2.5rem;
+    }
+    #formModal form::before {
+        width: 70%;
+    }
     .registration-section {
         padding: 90px 2.5% 75px;
     }
     form{
         width: 95%;
     }
-    .registration-section h{
+    form h{
         font-size: 1.4rem;
         margin: 5px 0 20px;
     }
-    .registration-section h1{
+    form h1{
         font-size: 0.85rem;
     }
-    .registration-section h2{
+    form h2{
         font-size: 0.9rem;
         margin-top: 4px;
     }
@@ -685,7 +751,7 @@ button:hover {
         width: 23px;
         height: 23px;
     }
-    button:hover {
+    .button1:hover {
         background-color: #770f00;
     }
 }
