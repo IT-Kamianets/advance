@@ -99,6 +99,10 @@
         <button type="submit" class="button1">Надіслати дані</button>
         <h2>Натискаючи цю кнопку, ви даєте згоду на обробку ваших персональних даних</h2>
     </form>
+    <div id="successMessage-form1" class="success-message">
+        <p>Ваші дані успішно надіслано!</p>
+        <button id="closeSuccess-form1" class="button2">Чудово!</button>
+    </div>
 </div>
 <!-- Sections -->
 <section id="about" class="about-section">
@@ -420,6 +424,10 @@
         <h2>Натискаючи цю кнопку, ви даєте згоду на обробку ваших персональних даних</h2>
     </form>
     <iframe name="hidden_iframe" style="display:none;"></iframe>
+    <div id="successMessage-form2" class="success-message">
+        <p>Ваші дані успішно надіслано!</p>
+        <button id="closeSuccess-form2" class="button2">Чудово!</button>
+    </div>
 </section>
 <!-- Footer -->
 <footer class="footer-custom" id="contact">
@@ -546,56 +554,7 @@
       closeMenu();
     }
   });
-  function validateForm1() {
-        var form = document.getElementById('form1');
-        var isValid = true;
-        document.querySelectorAll('#form1 .input-container').forEach(function(container) {
-            container.classList.remove('show-error');
-        });
-        document.querySelectorAll('#form1 .input-field').forEach(function(input) {
-            input.classList.remove('error');
-        });
-        var requiredFields = form.querySelectorAll('input[required]');
-        requiredFields.forEach(function(field) {
-            if (!field.value.trim()) {
-                isValid = false;
-                var container = field.closest('.input-container');
-                container.classList.add('show-error');
-                field.classList.add('error');
-            }
-        });
-        return isValid;
-    }
-    function validateForm2() {
-        var form = document.getElementById('form2');
-        var isValid = true;
-        document.querySelectorAll('#form2 .input-container').forEach(function(container) {
-            container.classList.remove('show-error');
-        });
-        document.querySelectorAll('#form2 .input-field').forEach(function(input) {
-            input.classList.remove('error');
-        });
-        var requiredFields = form.querySelectorAll('input[required]');
-        requiredFields.forEach(function(field) {
-            if (!field.value.trim()) {
-                isValid = false;
-                var container = field.closest('.input-container');
-                container.classList.add('show-error');
-                field.classList.add('error');
-            }
-        });
-        return isValid;
-    }
-    document.querySelectorAll('#form1 .input-field, #form2 .input-field').forEach(function(input) {
-        input.addEventListener('input', function() {
-            if (this.value.trim()) {
-                this.classList.remove('error');
-                var container = this.closest('.input-container');
-                container.classList.remove('show-error');
-            }
-        });
-    });
-    document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function() {
         const modal = document.getElementById("formModal");
         const closeButton = document.querySelector(".close");
         modal.style.display = "flex";
@@ -606,6 +565,85 @@
         });
         modal.querySelector('form').addEventListener('click', function(event) {
             event.stopPropagation();
+        });
+        function showSuccessMessage(formId) {
+            const successMessage = document.getElementById(`successMessage-${formId}`);
+            successMessage.style.display = "block";
+            const closeSuccessButton = document.getElementById(`closeSuccess-${formId}`);
+            closeSuccessButton.addEventListener('click', function() {
+                successMessage.style.display = "none";
+                if (formId === 'form1') {
+                    modal.style.display = "none";
+                    document.body.classList.remove("no-scroll");
+                } else {
+                    document.querySelectorAll(`#${formId} .input-field`).forEach(function(input) {
+                        input.value = '';
+                    });
+                }
+            });
+        }
+        function validateForm1() {
+            var form = document.getElementById('form1');
+            var isValid = true;
+            document.querySelectorAll('#form1 .input-container').forEach(function(container) {
+                container.classList.remove('show-error');
+            });
+            document.querySelectorAll('#form1 .input-field').forEach(function(input) {
+                input.classList.remove('error');
+            });
+            var requiredFields = form.querySelectorAll('input[required]');
+            requiredFields.forEach(function(field) {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    var container = field.closest('.input-container');
+                    container.classList.add('show-error');
+                    field.classList.add('error');
+                }
+            });
+            return isValid;
+        }
+        function validateForm2() {
+            var form = document.getElementById('form2');
+            var isValid = true;
+            document.querySelectorAll('#form2 .input-container').forEach(function(container) {
+                container.classList.remove('show-error');
+            });
+            document.querySelectorAll('#form2 .input-field').forEach(function(input) {
+                input.classList.remove('error');
+            });
+            var requiredFields = form.querySelectorAll('input[required]');
+            requiredFields.forEach(function(field) {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    var container = field.closest('.input-container');
+                    container.classList.add('show-error');
+                    field.classList.add('error');
+                }
+            });
+            return isValid;
+        }
+        document.querySelectorAll('#form1 .input-field, #form2 .input-field').forEach(function(input) {
+            input.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.classList.remove('error');
+                    var container = this.closest('.input-container');
+                    container.classList.remove('show-error');
+                }
+            });
+        });
+        document.getElementById('form1').addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (validateForm1()) {
+                document.getElementById('form1').submit();
+                showSuccessMessage('form1');
+            }
+        });
+        document.getElementById('form2').addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (validateForm2()) {
+                document.getElementById('form2').submit();
+                showSuccessMessage('form2');
+            }
         });
     });
 </script>
