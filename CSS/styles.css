@@ -611,6 +611,15 @@ form {
     margin: 0 auto;
     position: relative;
 }
+#form2 {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+#form2.animation {
+    opacity: 1;
+    transform: translateY(0);
+}
 .input-container {
     margin-bottom: 15px;
     position: relative;
