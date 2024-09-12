@@ -98,6 +98,7 @@ html {
 .navbar-logo {
     display: flex;
     height: 100%;
+    object-fit: contain;
 }
 .nav-text-custom {
     color: #770f00;
