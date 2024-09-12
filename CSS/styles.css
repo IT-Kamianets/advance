@@ -98,7 +98,7 @@ html {
 .navbar-logo {
     display: flex;
     height: auto;
-    max-height: 80px;
+    max-height: 65px;
 }
 .nav-text-custom {
     color: #770f00;
