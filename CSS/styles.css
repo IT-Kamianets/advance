@@ -97,8 +97,11 @@ html {
 }
 .navbar-logo {
     display: flex;
-    max-height: 80px;
-    object-fit: contain;
+    height: 65px;
+}
+.navbar-logo-white {
+    display: flex;
+    height: 80px;
 }
 .nav-text-custom {
     color: #770f00;
@@ -224,7 +227,7 @@ html {
         color: white;
         font-size: 1.25rem;
     }
-    .navbar-custom.show-menu.scrolled .navbar-logo {
+    .navbar-custom.show-menu.scrolled .navbar-logo-white {
         height: auto;
         max-height: 80px;
     }
