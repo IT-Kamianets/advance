@@ -565,6 +565,20 @@
     }
   });
   document.addEventListener("DOMContentLoaded", function() {
+        const columns = document.querySelectorAll('.courses-column');
+        function checkVisibility() {
+            const triggerPoint = window.innerHeight / 1.1;
+            columns.forEach(column => {
+                const rect = column.getBoundingClientRect();
+                if (rect.top < triggerPoint) {
+                    column.classList.add('animation');
+                }
+            });
+        }
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility();
+   });
+  document.addEventListener("DOMContentLoaded", function() {
         const modal = document.getElementById("formModal");
         const closeButton = document.querySelector(".close");
         modal.style.display = "flex";
