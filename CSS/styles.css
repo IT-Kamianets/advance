@@ -560,7 +560,7 @@ html {
 #form1 {
     position: relative;
     transform: scale(0);
-    transition: transform 0.5s ease-out;
+    transition: transform 0.8s ease-out;
 }
 #form1.show {
     transform: scale(1);
