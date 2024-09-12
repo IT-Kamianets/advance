@@ -19,7 +19,7 @@ html {
     max-width: 100%;
 }
 .navbar-brand {
-    display: flex;
+    display: none;
     align-items: center;
     position: absolute;
     left: 50%;
@@ -96,7 +96,7 @@ html {
     margin: 0 10px;
 }
 .navbar-logo {
-    display: none;
+    display: flex;
     height: auto;
     max-height: 80px;
 }
@@ -130,7 +130,7 @@ html {
     border-bottom: 1px solid white;
     height: 70px;
 }
-.navbar-custom.scrolled .navbar-logo {
+.navbar-custom.scrolled .navbar-brand {
     height: 65px;
     display: flex;
 }
