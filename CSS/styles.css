@@ -338,7 +338,7 @@ html {
 }
 @media (max-width: 500px){
     .more-text.expanded {
-        max-height: 2000px;
+        max-height: 2500px;
     }
     .toggle-button {
         font-size: 0.9rem;
@@ -352,7 +352,7 @@ html {
         padding: 80px 0 40px 0;
     }
     .cd {
-        padding: 40px 0;
+        padding: 40px 0 80px 0;
     }
     .about-section h2{
         margin-bottom: 1rem;
